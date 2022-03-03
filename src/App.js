@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import wallpaperImg from "./assets/img-wallpaper.jpg";
 import imgBulletinBoard from "./assets/img-bulletin-board.jpeg";
+import imgWoodPlank from "./assets/img-wood-plank.jpeg"
 const GlobalStyle = createGlobalStyle `
 *{
   margin: 0;
@@ -66,12 +67,16 @@ const BoxAddtext = styled.div `
   display:flex;
   justify-content:flex-end;
   flex-wrap:wrap;
+  background-image:url(${imgWoodPlank});
+  background-size:100% 100%;
+  background-repeat:no-repeat;
 `
 const InputAddText = styled.input `
   width:max(80%,20rem);
   height: 6vh;
+  margin-right:1%;
   padding-left:2%;
-  border: 4px solid rgb(80,80,80);
+  border: 2px solid rgb(180,180,180);
   border-radius: none;
   font-size:1.2em;
   &:focus{
@@ -85,6 +90,7 @@ const AllButton = styled.button`
   border-radius: 50%;
   background-color: rgb(236, 201, 104);
   border: 1px solid black;
+  font-size:0.9em;
   &:hover{
   outline: 2px solid rgb(245, 190, 71);
 }
@@ -106,22 +112,22 @@ const SectionCalculator = styled.section`
   }
 `
 const BoxResultCalc = styled.div`
-  width: 40vh;
+  width: 99%;
   height:15vh;
-  margin:2% 0;
-  padding:2.5% 0 4% 2.5%;
+  margin:2% auto;
+  padding:2.5% 0 2% 2.5%;
   border:8px rgb(238, 238, 238) inset;
   align-items: center;
   background-color:rgb(10,10 , 10);
   
   
   p{
-    width:90%;
+    width:99%;
     display:flex;
     justify-content:flex-end;
     overflow-wrap: break-word;
     text-align:end;
-    font-size:1.5em;
+    font-size:1.14em;
     color: yellow;
   }
 `
