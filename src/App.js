@@ -131,6 +131,12 @@ const BoxResultCalc = styled.div`
     color: yellow;
   }
 `
+const BoxDubleCalc = styled.div`
+  display:flex;
+  justify-content:flex-end;
+  flex-wrap:wrap;
+`
+
 const InputNumber = styled.input`
 border:5px rgb(205,205,205) inset;
 background-color:rgb(240,240,240);
@@ -239,11 +245,14 @@ class App extends Component{
           <BoxResultCalc>
             <p>{this.state.result}</p>
           </BoxResultCalc>
-            
-          <InputNumber onKeyDown={(e) => this.doubleKeyCode(e)} type="number" value={this.state.calc} onChange={this.handleChangeCalc}/>
-          <AllButton id="color-gray" title='Use: Tecla(Enter)' onClick={this.double}>x2</AllButton>
-          <AllButton id="color-gray" title='Use: Tecla(Delete)' onClick={this.removeCalc}>⌫</AllButton>
-            
+          <BoxDubleCalc>
+
+            <InputNumber onKeyDown={(e) => this.doubleKeyCode(e)} type="number" value={this.state.calc} onChange={this.handleChangeCalc}/>
+            <AllButton id="color-gray" title='Use: Tecla(Enter)' onClick={this.double}>x2</AllButton>
+            <AllButton id="color-gray" title='Use: Tecla(Delete)' onClick={this.removeCalc}>⌫</AllButton>
+         
+          </BoxDubleCalc>
+
         </SectionCalculator>
 
       </BackgraundPag>
